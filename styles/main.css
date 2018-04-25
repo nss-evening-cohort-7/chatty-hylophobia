@@ -8,9 +8,15 @@ body {
   color: black;
 }
 
+<<<<<<< HEAD
 /* #messageInput{
   width: 555px;
 } */
+=======
+.nav-margin {
+  height: 130px;
+}
+>>>>>>> master
 
 /************** Messages Display **************/
 
@@ -23,4 +29,9 @@ body {
 .displayed-message {
   font-size: 20px;
   margin-left: 10px;
+}
+
+/*-------------------- Modal Styling----------------------- */
+.modal {
+  color: black;
 }

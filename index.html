@@ -49,11 +49,58 @@
           </div>
       </div>
     </nav>
-    <h1>Let's Get Chatty!</h1>
+    <div class="nav-margin"></div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal">
+    Select a Theme</button>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Select a Design Theme</h4>
+          </div>
+          <div class="modal-body">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="theme-choice" value="large-text">Large Text
+              </label>
+              <label>
+                <input type="checkbox" name="theme-choice" value="dark-theme">Dark Theme
+              </label><br><br>
+              <h4>Custom Theme</h4>
+              <h6>Background Color</h6>
+              <label>
+                <input type="checkbox" name="color-choice" value="tomato">Tomato
+              </label>
+              <label>
+                <input type="checkbox" name="color-choice" value="almond">Almond
+              </label>
+              <label>
+                <input type="checkbox" name="color-choice" value="dark-purple">Dark Purple
+              </label><br>
+              <h6>Font Color</h6>
+              <label>
+                <input type="checkbox" name="color-choice" value="white">White
+              </label>
+              <label>
+                <input type="checkbox" name="color-choice" value="black">Black
+              </label>
+            </div><!--Checkboxes div-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="messages-display">
 
     </div>
+
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
