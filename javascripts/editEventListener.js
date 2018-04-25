@@ -1,6 +1,6 @@
 const deleteEventListener = require('./deleteEventListener');
 const editButtons = document.getElementsByClassName('edit');
-const inputVal = document.getElementById('inputField');
+const inputVal = document.getElementById('messageInput');
 const enterListener = document.getElementsByClassName('form-control');
 const initEditButton = () =>
 {
