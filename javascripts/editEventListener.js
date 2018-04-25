@@ -1,4 +1,5 @@
 const editButtons = document.getElementsByClassName('edit');
+const inputVal = document.getElementById('inputField');
 const enterListener = document.getElementsByClassName('form-control');
 const initEditButton = () =>
 {
@@ -22,7 +23,7 @@ const edditor = () =>
   removeListener();
   console.log('removeworks');
   saveButton .classList.remove('hidden');
-  console.log(enterListener);
+  console.log(inputVal.value);
 };
 
 module.exports =
