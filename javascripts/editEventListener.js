@@ -1,3 +1,4 @@
+const deleteEventListener = require('./deleteEventListener');
 const editButtons = document.getElementsByClassName('edit');
 const inputVal = document.getElementById('inputField');
 const enterListener = document.getElementsByClassName('form-control');
@@ -17,12 +18,14 @@ const removeListener = () =>
   }
 };
 
-const edditor = () =>
+const edditor = (e) =>
 {
   const saveButton = document.getElementById('save');
   removeListener();
-  console.log('removeworks');
   saveButton .classList.remove('hidden');
+  const messageID = deleteEventListener.getId(e);
+  console.log(messageID);
+  inputVal.value = e.target.previousSibling.innerHTML;
   console.log(inputVal.value);
 };
 
