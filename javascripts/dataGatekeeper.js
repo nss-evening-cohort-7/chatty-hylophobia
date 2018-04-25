@@ -2,6 +2,7 @@ const loadMessages = require('./messages');
 const data = require('./data');
 const buildDomString = require('./dom');
 const radioButton = require('./radioButtonEvent');
+const modalEvents = require('./modalEvents');
 
 const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
@@ -15,7 +16,8 @@ const errorFunction = function () {
 
 const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
-  radioButton();
+  radioButton.radioButtonEvent();
+  modalEvents();
 };
 
 module.exports = {
