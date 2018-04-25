@@ -3,6 +3,11 @@ body {
   color: white;
 }
 
+/************** Navigation Bar ****************/
+.navbar {
+  color: black;
+}
+
 /************** Messages Display **************/
 
 .displayed-username,
