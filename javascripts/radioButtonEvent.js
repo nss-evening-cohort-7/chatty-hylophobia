@@ -4,6 +4,9 @@ let userName = '';
 const button = (e) => {
   const selectedUserName = e.target.value;
   userName = selectedUserName;
+};
+
+const getUserName = () => {
   return userName;
 };
 
@@ -14,4 +17,7 @@ const radioButtonEvent = () => {
   };
 };
 
-module.exports = radioButtonEvent;
+module.exports = {
+  radioButtonEvent,
+  getUserName,
+};
