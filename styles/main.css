@@ -1,12 +1,8 @@
 body {
-  background-color: slategrey;
-  color: white;
+  background-color: rgb(144, 172, 201);
 }
 
 /************** Navigation Bar ****************/
-.navbar {
-  color: black;
-}
 
 #messageInput{
   width: 1000px;
@@ -45,4 +41,9 @@ body {
 /*-------------------- Modal Styling----------------------- */
 .modal {
   color: black;
+}
+
+.dark-theme {
+  background-color: rgb(57, 51, 68);
+  color: white;
 }
