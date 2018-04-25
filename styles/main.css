@@ -2,3 +2,8 @@ body {
   background-color: slategrey;
   color: white;
 }
+
+/*-------------------- Modal Styling----------------------- */
+.modal {
+  color: black;
+}
