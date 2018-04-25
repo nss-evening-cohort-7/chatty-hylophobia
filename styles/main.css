@@ -8,8 +8,9 @@ body {
   color: black;
 }
 
-.empty-nav {
-  height: 120px;
+
+.nav-margin {
+  height: 130px;
 }
 
 /************** Messages Display **************/
@@ -36,4 +37,9 @@ body {
 
 .delete-message:hover {
   background-color: tomato;
+}
+
+/*-------------------- Modal Styling----------------------- */
+.modal {
+  color: black;
 }
