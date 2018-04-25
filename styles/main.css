@@ -3,6 +3,20 @@ body {
   color: white;
 }
 
+/************** Navigation Bar ****************/
 .navbar {
   color: black;
+}
+
+/************** Messages Display **************/
+
+.displayed-username,
+.displayed-time,
+.displayed-message {
+  display: inline;
+}
+
+.displayed-message {
+  font-size: 20px;
+  margin-left: 10px;
 }
