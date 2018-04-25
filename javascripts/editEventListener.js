@@ -1,4 +1,5 @@
 const editButtons = document.getElementsByClassName('edit');
+const enterListener = document.getElementsByClassName('form-control');
 const initEditButton = () =>
 {
   for (let idx = 0; idx < editButtons.length; idx++)
@@ -7,10 +8,21 @@ const initEditButton = () =>
   };
 };
 
+const removeListener = () =>
+{
+  for (let idx = 0; idx < enterListener.length; idx++)
+  {
+    enterListener[idx].removeEventListener('click', function () {});
+  }
+};
+
 const edditor = () =>
 {
   const saveButton = document.getElementById('save');
+  removeListener();
+  console.log('removeworks');
   saveButton .classList.remove('hidden');
+  console.log(enterListener);
 };
 
 module.exports =
