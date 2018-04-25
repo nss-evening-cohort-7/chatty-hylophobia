@@ -22,7 +22,7 @@ const edditor = (e) =>
 {
   const saveButton = document.getElementById('save');
   removeListener();
-  saveButton .classList.remove('hidden');
+  saveButton.classList.remove('hidden');
   const messageID = deleteEventListener.getId(e);
   console.log(messageID);
   inputVal.value = e.target.previousSibling.innerHTML;
