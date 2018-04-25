@@ -1,10 +1,11 @@
 const loadMessages = require('./messages');
 const data = require('./data');
+const buildDomString = require('./dom');
 
 const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
   data.setMessages(messagesData);
-  console.log(messagesData);
+  buildDomString(messagesData);
 };
 
 const errorFunction = function () {
