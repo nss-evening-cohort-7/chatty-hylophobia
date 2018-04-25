@@ -1,7 +1,20 @@
 const editButtons = document.getElementsByClassName('edit');
-editButtons.addEventListener('click', edditor);
+const initEditButton = () =>
+{
+  for (let idx = 0; idx < editButtons.length; idx++)
+  {
+    editButtons[idx].addEventListener('click', edditor);
+  };
+};
 
-const edditor = () => {
+const edditor = () =>
+{
   const saveButton = document.getElementById('save');
-  saveButton.classList.remove('hidden');
+  saveButton .classList.remove('hidden');
+};
+
+module.exports =
+{
+  edditor,
+  initEditButton,
 };
