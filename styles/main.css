@@ -8,6 +8,7 @@ body {
   color: black;
 }
 
+
 .nav-margin {
   height: 130px;
 }
@@ -23,6 +24,19 @@ body {
 .displayed-message {
   font-size: 20px;
   margin-left: 10px;
+}
+
+.edit,
+.delete-message {
+  background-color: slategrey;
+}
+
+.edit:hover {
+  background-color: rgb(165, 188, 211);
+}
+
+.delete-message:hover {
+  background-color: tomato;
 }
 
 /*-------------------- Modal Styling----------------------- */
