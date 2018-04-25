@@ -1,19 +1,17 @@
-const radioButtons = document.getElementsByClassName('radioButton');
 
 let userName = '';
 
 const button = (e) => {
-  console.log(e);
-  const selectedUserName = e.target;
-  return selectedUserName;
+  const selectedUserName = e.target.value;
+  userName = selectedUserName;
+  return userName;
 };
 
 const radioButtonEvent = () => {
+  const radioButtons = document.getElementsByClassName('radioButton');
   for (let i = 0; i < radioButtons.length; i++) {
-    radioButtons.addEventListener('click', button);
-    userName = selectedUserName;
+    radioButtons[i].addEventListener('click', button);
   };
-  return userName;
 };
 
 module.exports = radioButtonEvent;
