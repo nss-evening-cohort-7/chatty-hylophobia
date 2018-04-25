@@ -26,7 +26,6 @@ const edditor = (e) =>
   const messageID = deleteEventListener.getId(e);
   console.log(messageID);
   inputVal.value = e.target.previousSibling.innerHTML;
-  console.log(inputVal.value);
 };
 
 module.exports =
