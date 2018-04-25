@@ -8,6 +8,10 @@ body {
   color: black;
 }
 
+/* #messageInput{
+  width: 555px;
+} */
+
 /************** Messages Display **************/
 
 .displayed-username,
