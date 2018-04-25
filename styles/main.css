@@ -8,6 +8,10 @@ body {
   color: black;
 }
 
+.nav-margin {
+  height: 130px;
+}
+
 /************** Messages Display **************/
 
 .displayed-username,
