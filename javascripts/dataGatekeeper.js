@@ -10,8 +10,8 @@ const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
   data.setMessages(messagesData);
   buildDomString(messagesData);
-  deleteEventListener.deleteEventListener();
   // addToArray();
+  deleteEventListener.deleteEventListener();
 };
 
 const errorFunction = function () {
