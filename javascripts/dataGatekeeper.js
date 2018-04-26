@@ -10,9 +10,9 @@ const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
   data.setMessages(messagesData);
   buildDomString(messagesData);
-  // addToArray();
+  edit.initEditButton();
   deleteEventListener.deleteEventListener();
-  radioButton.keyPressEvent();
+  // addToArray();
 };
 
 const errorFunction = function () {
@@ -23,6 +23,7 @@ const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
   edit.initEditButton();
   radioButton.radioButtonEvent();
+  radioButton.keyPressEvent();
 };
 
 module.exports = {
