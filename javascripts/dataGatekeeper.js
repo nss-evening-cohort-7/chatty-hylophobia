@@ -10,6 +10,7 @@ const whenMessagesLoads = function () {
   data.setMessages(messagesData);
   buildDomString(messagesData);
   addToArray();
+  edit.initEditButton();
 };
 
 const errorFunction = function () {
