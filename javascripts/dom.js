@@ -1,5 +1,5 @@
-const deleteEventListener = require('./deleteEventListener');
-const edit = require('./editEventListener');
+
+// const edit = require('./editEventListener');
 
 const buildDomString = (messagesArray) => {
   let domString = '';
@@ -9,12 +9,11 @@ const buildDomString = (messagesArray) => {
     domString +=    `<p class="displayed-time">[${message.timestamp}]:</p>`;
     domString +=    `<p class="displayed-message">${message.message}</p>`;
     domString +=    `<button class="edit">Edit</button>`;
-    domString +=    `<button class="delete-message"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>`;
+    domString +=    `<button class="delete-message">Delete</button>`;
     domString +=  `</div>`;
   });
   printToDom('messages-display', domString);
-  deleteEventListener.deleteEventListener();
-  edit.initEditButton();
+  // edit.initEditButton();
 };
 
 const printToDom = (divId, string) => {
