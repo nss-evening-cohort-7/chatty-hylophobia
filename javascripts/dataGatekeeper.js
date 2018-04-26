@@ -11,6 +11,7 @@ const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
   data.setMessages(messagesData);
   buildDomString(messagesData);
+  edit.initEditButton();
   deleteEventListener.deleteEventListener();
   // addToArray();
 };
