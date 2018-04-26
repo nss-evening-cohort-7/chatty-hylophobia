@@ -17,7 +17,7 @@ const errorFunction = function () {
 const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
   radioButton.radioButtonEvent();
-  modalEvents();
+  modalEvents.selectThemeEvent();
 };
 
 module.exports = {
