@@ -1,5 +1,6 @@
 const data = require('./data');
 const buildDomString = require('./dom');
+const edit = require('./editEventListener');
 
 const getId = (e) => {
   const id = e.target.parentNode.id;
@@ -13,6 +14,7 @@ const removeFromArray = (id) => {
   const newMessages = messages.filter(message => message.id !== id);
   buildDomString(newMessages);
   deleteEventListener();
+  edit.initEditButton();
   data.setMessages(newMessages);
 };
 
