@@ -4,6 +4,7 @@ const buildDomString = require('./dom');
 const deleteEventListener = require('./deleteEventListener');
 const radioButton = require('./radioButtonEvent');
 const edit = require('./editEventListener');
+const clearButton = require('./clearEvent');
 // const addToArray = require('./addToArray');
 const enterListener = require('./enterEventListener');
 
@@ -25,6 +26,7 @@ const initializer = () => {
   enterListener();
   edit.initEditButton();
   radioButton.radioButtonEvent();
+  clearButton.addClearEvent();
 };
 
 module.exports = {
