@@ -1,4 +1,5 @@
 const deleteEventListener = require('./deleteEventListener');
+const edit = require('./editEventListener');
 
 const buildDomString = (messagesArray) => {
   let domString = '';
@@ -13,6 +14,7 @@ const buildDomString = (messagesArray) => {
   });
   printToDom('messages-display', domString);
   deleteEventListener.deleteEventListener();
+  edit.initEditButton();
 };
 
 const printToDom = (divId, string) => {
