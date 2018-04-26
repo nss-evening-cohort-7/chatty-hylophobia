@@ -1,4 +1,3 @@
-const deleteEventListener = require('./deleteEventListener');
 const editButtons = document.getElementsByClassName('edit');
 const inputVal = document.getElementById('messageInput');
 const enterListener = document.getElementsByClassName('form-control');
@@ -23,8 +22,6 @@ const edditor = (e) =>
   const saveButton = document.getElementById('save');
   removeListener();
   saveButton.classList.remove('hidden');
-  const messageID = deleteEventListener.getId(e);
-  console.log(messageID);
   inputVal.value = e.target.previousSibling.innerHTML;
 };
 
