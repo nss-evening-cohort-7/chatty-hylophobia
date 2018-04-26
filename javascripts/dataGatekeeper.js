@@ -3,7 +3,7 @@ const data = require('./data');
 const buildDomString = require('./dom');
 const deleteEventListener = require('./deleteEventListener');
 const radioButton = require('./radioButtonEvent');
-// const edit = require('./editEventListener');
+const edit = require('./editEventListener');
 // const addToArray = require('./addToArray');
 
 const whenMessagesLoads = function () {
@@ -20,7 +20,7 @@ const errorFunction = function () {
 
 const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
-  // edit.initEditButton();
+  edit.initEditButton();
   radioButton.radioButtonEvent();
 };
 
