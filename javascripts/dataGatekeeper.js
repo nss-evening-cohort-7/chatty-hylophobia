@@ -4,6 +4,7 @@ const buildDomString = require('./dom');
 const deleteEventListener = require('./deleteEventListener');
 const radioButton = require('./radioButtonEvent');
 const edit = require('./editEventListener');
+const clearButton = require('./clearEvent');
 // const addToArray = require('./addToArray');
 
 const whenMessagesLoads = function () {
@@ -22,6 +23,7 @@ const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
   edit.initEditButton();
   radioButton.radioButtonEvent();
+  clearButton.addClearEvent();
 };
 
 module.exports = {
