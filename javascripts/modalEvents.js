@@ -7,8 +7,7 @@ const changeTheme = (e) => {
     page.classList.add('dark-theme');
     navbar.classList.remove('navbar-default');
     navbar.classList.add('navbar-inverse');
-  };
-  if (themePicked.id === 'large-txt') {
+  } else if (themePicked.id === 'large-txt') {
     page.classList.add('large-txt');
   };
   return themePicked;
@@ -20,6 +19,8 @@ const removeTheme = (e) => {
     page.classList.remove('dark-theme');
     navbar.classList.add('navbar-default');
     navbar.classList.remove('navbar-inverse');
+  } else if (themeToRemove.id === 'large-txt') {
+    page.classList.remove('large-txt');
   };
   return themeToRemove;
 };
