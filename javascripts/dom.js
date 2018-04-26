@@ -1,4 +1,6 @@
 
+// const edit = require('./editEventListener');
+
 const buildDomString = (messagesArray) => {
   let domString = '';
   messagesArray.forEach((message) => {
@@ -11,6 +13,7 @@ const buildDomString = (messagesArray) => {
     domString +=  `</div>`;
   });
   printToDom('messages-display', domString);
+  // edit.initEditButton();
 };
 
 const printToDom = (divId, string) => {
