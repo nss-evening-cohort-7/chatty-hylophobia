@@ -12,6 +12,7 @@ const whenMessagesLoads = function () {
   buildDomString(messagesData);
   // addToArray();
   deleteEventListener.deleteEventListener();
+  radioButton.keyPressEvent();
 };
 
 const errorFunction = function () {

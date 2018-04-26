@@ -1,3 +1,4 @@
+const addToArray = require('./addToArray');
 
 let userName = '';
 
@@ -17,7 +18,17 @@ const radioButtonEvent = () => {
   };
 };
 
+const keyPressEvent = (e) => {
+  const messageInput = document.getElementById('messageInput');
+  messageInput.addEventListener('keypress', (e) => {
+    if (e.keyCode === 13) {
+      addToArray();
+    };
+  });
+};
+
 module.exports = {
   radioButtonEvent,
   getUserName,
+  keyPressEvent,
 };
