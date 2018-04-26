@@ -1,5 +1,5 @@
-const edit = require('./editEventListener');
+// const edit = require('./editEventListener');
 const dataGatekeeper = require('./dataGatekeeper');
+// edit.initEditButton();
 
-edit.initEditButton();
 dataGatekeeper.initializer();
