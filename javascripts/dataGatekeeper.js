@@ -9,7 +9,7 @@ const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
   data.setMessages(messagesData);
   buildDomString(messagesData);
-  addToArray();
+  // addToArray();
 };
 
 const errorFunction = function () {
