@@ -3,11 +3,13 @@ const data = require('./data');
 const buildDomString = require('./dom');
 const radioButton = require('./radioButtonEvent');
 const edit = require('./editEventListener');
+const addToArray = require('./addToArray');
 
 const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
   data.setMessages(messagesData);
   buildDomString(messagesData);
+  addToArray();
 };
 
 const errorFunction = function () {
@@ -16,8 +18,8 @@ const errorFunction = function () {
 
 const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
-  radioButton();
   edit.initEditButton();
+  radioButton.radioButtonEvent();
 };
 
 module.exports = {
