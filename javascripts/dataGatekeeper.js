@@ -20,7 +20,7 @@ const errorFunction = function () {
 const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
   radioButton.radioButtonEvent();
-  modalEvents.selectThemeEvent();
+  modalEvents.selectThemeEvents();
   edit.initEditButton();
 };
 

@@ -13,6 +13,36 @@ const changeTheme = (e) => {
   return themePicked;
 };
 
+const changeColor = (e) => {
+  const colorPicked = e.target;
+  if (colorPicked.id === 'tomato') {
+    page.classList.add('tomato');
+    page.classList.remove('tan');
+    page.classList.remove('dark-violet');
+  } else if (colorPicked.id === 'tan') {
+    page.classList.add('tan');
+    page.classList.remove('dark-violet');
+    page.classList.remove('tomato');
+  } else if (colorPicked.id === 'dark-violet') {
+    page.classList.add('dark-violet');
+    page.classList.remove('tomato');
+    page.classList.remove('tan');
+  }
+  return colorPicked;
+};
+
+const changeTxtColor = (e) => {
+  const txtColorPicked = e.target;
+  if (txtColorPicked.id === 'black-txt') {
+    page.classList.add('black-txt');
+    page.classList.remove('white-txt');
+  } else if (txtColorPicked.id === 'white-txt') {
+    page.classList.add('white-txt');
+    page.classList.remove('black-txt');
+  };
+  return txtColorPicked;
+};
+
 const removeTheme = (e) => {
   const themeToRemove = e.target;
   if (themeToRemove.id === 'dark-theme') {
@@ -25,7 +55,7 @@ const removeTheme = (e) => {
   return themeToRemove;
 };
 
-const selectThemeEvent = () => {
+const selectThemeEvents = () => {
   const themeChoices = document.getElementsByClassName('theme');
   for (let i = 0; i < themeChoices.length; i++) {
     themeChoices[i].addEventListener('change', function () {
@@ -36,8 +66,16 @@ const selectThemeEvent = () => {
       }
     });
   };
+  const colorChoices = document.getElementsByClassName('colors');
+  for (let j = 0; j < colorChoices.length; j++) {
+    colorChoices[j].addEventListener('click', changeColor);
+  };
+  const txtColorChoices = document.getElementsByClassName('txt-colors');
+  for (let k = 0; k < txtColorChoices.length; k++) {
+    txtColorChoices[k].addEventListener('click', changeTxtColor);
+  };
 };
 
 module.exports = {
-  selectThemeEvent,
+  selectThemeEvents,
 };
