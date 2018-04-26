@@ -1,4 +1,6 @@
 const data = require('./data');
+const buildDomString = require('./dom');
+const edit = require('./editEventListener');
 
 const getId = (e) => {
   const id = e.target.parentNode.id;
@@ -7,11 +9,21 @@ const getId = (e) => {
 
 const deleteButtons = document.getElementsByClassName('delete-message');
 
+const removeFromArray = (id) => {
+  const messages = data.getMessages();
+  const newMessages = messages.filter(message => message.id !== id);
+  buildDomString(newMessages);
+  deleteEventListener();
+  edit.initEditButton();
+  data.setMessages(newMessages);
+};
+
 const deleteEventListener = () => {
   for (let i = 0; i < deleteButtons.length; i ++) {
     deleteButtons[i].addEventListener('click', (e) => {
-      const messageID = getId(e);
-      data.removeFromArray(messageID);
+      let messageID = getId(e);
+      messageID = messageID * 1;
+      removeFromArray(messageID);
     });
   }
 };
