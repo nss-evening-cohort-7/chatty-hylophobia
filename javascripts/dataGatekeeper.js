@@ -5,6 +5,7 @@ const deleteEventListener = require('./deleteEventListener');
 const radioButton = require('./radioButtonEvent');
 const edit = require('./editEventListener');
 // const addToArray = require('./addToArray');
+const enterListener = require('./enterEventListener');
 
 const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
@@ -21,6 +22,7 @@ const errorFunction = function () {
 
 const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
+  enterListener();
   edit.initEditButton();
   radioButton.radioButtonEvent();
 };
