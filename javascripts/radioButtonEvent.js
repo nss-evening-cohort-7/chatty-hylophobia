@@ -1,4 +1,4 @@
-const addToArray = require('./addToArray');
+// const addToArray = require('./addToArray');
 
 let userName = '';
 
@@ -9,6 +9,7 @@ const button = (e) => {
 
 const getUserName = () => {
   return userName;
+  // console.log (userName);
 };
 
 const radioButtonEvent = () => {
@@ -18,17 +19,18 @@ const radioButtonEvent = () => {
   };
 };
 
-const keyPressEvent = (e) => {
-  const messageInput = document.getElementById('messageInput').value;
-  messageInput.addEventListener('keypress', (e) => {
-    if (e.keyCode === 13) {
-      addToArray();
-    };
-  });
-};
+// Key press
+// const keyPressEvent = (e) => {
+//   const messageInput = document.getElementById('messageInput').value;
+//   messageInput.addEventListener('keypress', (e) => {
+//     if (e.keyCode === 13) {
+//       addToArray();
+//     };
+//   });
+// };
 
 module.exports = {
   radioButtonEvent,
   getUserName,
-  keyPressEvent,
+  // keyPressEvent,
 };

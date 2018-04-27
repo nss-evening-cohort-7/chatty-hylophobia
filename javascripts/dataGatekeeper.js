@@ -27,13 +27,10 @@ const initializer = () => {
   enterListener();
   edit.initEditButton();
   radioButton.radioButtonEvent();
-<<<<<<< HEAD
-  radioButton.keyPressEvent();
-=======
+  // radioButton.keyPressEvent();
   modalEvents.selectThemeEvents();
   modalEvents.removeAllThemes();
   edit.initEditButton();
->>>>>>> master
   clearButton.addClearEvent();
 };
 
