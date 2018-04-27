@@ -19,7 +19,7 @@ const radioButtonEvent = () => {
 };
 
 const keyPressEvent = (e) => {
-  const messageInput = document.getElementById('messageInput');
+  const messageInput = document.getElementById('messageInput').value;
   messageInput.addEventListener('keypress', (e) => {
     if (e.keyCode === 13) {
       addToArray();
