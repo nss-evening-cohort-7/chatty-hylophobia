@@ -13,7 +13,7 @@ const addToArray = () => {
     'timestamp': timestamp,
     'id': counter,
   };
-  counter = counter ++;
+  counter++;
   data.addMessage(newObject);
   dom(data.getMessages());
   console.log(data.message);
