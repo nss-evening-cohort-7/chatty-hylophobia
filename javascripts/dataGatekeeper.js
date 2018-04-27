@@ -7,6 +7,7 @@ const modalEvents = require('./modalEvents');
 const edit = require('./editEventListener');
 const clearButton = require('./clearEvent');
 // const addToArray = require('./addToArray');
+const enterListener = require('./enterEventListener');
 
 const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
@@ -23,6 +24,8 @@ const errorFunction = function () {
 
 const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
+  enterListener();
+  edit.initEditButton();
   radioButton.radioButtonEvent();
   modalEvents.selectThemeEvents();
   modalEvents.removeAllThemes();

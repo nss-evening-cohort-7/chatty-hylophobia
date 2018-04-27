@@ -75,3 +75,9 @@ body {
 .contrast {
   background-color: grey;
 }
+
+/*---------------------JMOJI-------------------------------*/
+.jemoji-info {
+  display: none;
+
+}
