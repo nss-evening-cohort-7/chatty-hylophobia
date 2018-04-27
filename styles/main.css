@@ -46,3 +46,8 @@ body {
 .modal {
   color: black;
 }
+
+/*---------------------JMOJI-------------------------------*/
+.jemoji-info {
+  display: none;
+}
