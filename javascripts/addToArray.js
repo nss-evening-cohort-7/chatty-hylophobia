@@ -16,7 +16,6 @@ const addToArray = () => {
   counter++;
   data.addMessage(newObject);
   dom(data.getMessages());
-  console.log(data.message);
 };
 
 module.exports = addToArray;
