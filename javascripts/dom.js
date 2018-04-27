@@ -1,3 +1,4 @@
+
 const buildDomString = (messagesArray) => {
   let domString = '';
   messagesArray.forEach((message) => {

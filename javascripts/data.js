@@ -11,6 +11,15 @@ const setMessages = (messagesArray) => {
 
 const addMessage = (newMessage) => {
   messages.push(newMessage);
+  messageLimit(messages);
+};
+
+const messageLimit = (messagesArray) => {
+  if (messagesArray.length > 20) {
+    const shiftThis = messagesArray.shift();
+    const limitedMessages = messagesArray.filter(message => message !== shiftThis);
+    setMessages(limitedMessages);
+  }
 };
 
 const saveChanges = () => {
@@ -21,6 +30,7 @@ const saveChanges = () => {
 module.exports = {
   getMessages,
   setMessages,
+  messageLimit,
   saveChanges,
   addMessage,
 };
