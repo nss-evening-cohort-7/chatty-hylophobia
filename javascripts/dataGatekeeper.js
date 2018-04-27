@@ -24,6 +24,7 @@ const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
   radioButton.radioButtonEvent();
   modalEvents.selectThemeEvents();
+  modalEvents.removeAllThemes();
   edit.initEditButton();
 };
 

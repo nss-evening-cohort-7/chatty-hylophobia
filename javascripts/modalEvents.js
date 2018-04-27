@@ -89,6 +89,17 @@ const selectThemeEvents = () => {
   };
 };
 
+const removeAllThemes = () => {
+  const cancelButton = document.getElementById('cancel-changes');
+  cancelButton.addEventListener('click', function () {
+    page.removeAttribute('class');
+    navbar.classList.add('navbar-default');
+    navbar.classList.remove('navbar-inverse');
+    navbar.classList.remove('contrast');
+  });
+};
+
 module.exports = {
   selectThemeEvents,
+  removeAllThemes,
 };
