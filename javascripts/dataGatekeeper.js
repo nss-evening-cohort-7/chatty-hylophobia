@@ -5,6 +5,7 @@ const deleteEventListener = require('./deleteEventListener');
 const radioButton = require('./radioButtonEvent');
 const modalEvents = require('./modalEvents');
 const edit = require('./editEventListener');
+const clearButton = require('./clearEvent');
 // const addToArray = require('./addToArray');
 
 const whenMessagesLoads = function () {
@@ -26,6 +27,7 @@ const initializer = () => {
   modalEvents.selectThemeEvents();
   modalEvents.removeAllThemes();
   edit.initEditButton();
+  clearButton.addClearEvent();
 };
 
 module.exports = {
