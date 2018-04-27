@@ -71,3 +71,7 @@ body {
 .white-txt {
   color: white;
 }
+
+.contrast {
+  background-color: grey;
+}

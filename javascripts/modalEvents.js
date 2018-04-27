@@ -1,16 +1,39 @@
 const page = document.getElementById('body');
 const navbar = document.getElementById('navbar');
+const customColorSelections = document.getElementsByClassName('color-selection');
 
 const changeTheme = (e) => {
   const themePicked = e.target;
   if (themePicked.id === 'dark-theme') {
+    for (let i = 0; i < customColorSelections.length; i++) {
+      customColorSelections[i].setAttribute('disabled', 'disabled');
+    }
     page.classList.add('dark-theme');
     navbar.classList.remove('navbar-default');
     navbar.classList.add('navbar-inverse');
+    page.classList.remove('tan');
+    page.classList.remove('dark-violet');
+    page.classList.remove('tomato');
+    page.classList.remove('black-txt');
   } else if (themePicked.id === 'large-txt') {
     page.classList.add('large-txt');
   };
   return themePicked;
+};
+
+const removeTheme = (e) => {
+  const themeToRemove = e.target;
+  if (themeToRemove.id === 'dark-theme') {
+    for (let i = 0; i < customColorSelections.length; i++) {
+      customColorSelections[i].removeAttribute('disabled');
+    }
+    page.classList.remove('dark-theme');
+    navbar.classList.add('navbar-default');
+    navbar.classList.remove('navbar-inverse');
+  } else if (themeToRemove.id === 'large-txt') {
+    page.classList.remove('large-txt');
+  };
+  return themeToRemove;
 };
 
 const changeColor = (e) => {
@@ -36,23 +59,13 @@ const changeTxtColor = (e) => {
   if (txtColorPicked.id === 'black-txt') {
     page.classList.add('black-txt');
     page.classList.remove('white-txt');
+    navbar.classList.remove('contrast');
   } else if (txtColorPicked.id === 'white-txt') {
     page.classList.add('white-txt');
     page.classList.remove('black-txt');
+    navbar.classList.add('contrast');
   };
   return txtColorPicked;
-};
-
-const removeTheme = (e) => {
-  const themeToRemove = e.target;
-  if (themeToRemove.id === 'dark-theme') {
-    page.classList.remove('dark-theme');
-    navbar.classList.add('navbar-default');
-    navbar.classList.remove('navbar-inverse');
-  } else if (themeToRemove.id === 'large-txt') {
-    page.classList.remove('large-txt');
-  };
-  return themeToRemove;
 };
 
 const selectThemeEvents = () => {
