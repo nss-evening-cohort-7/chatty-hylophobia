@@ -53,6 +53,7 @@ const replaceInArray = () => {
   data.setMessages(messages);
   buildDomString(messages);
   messageEvents();
+  emojify.run(document.getElementById('messages-display'));
 };
 
 const deleteButtons = document.getElementsByClassName('delete-message');
