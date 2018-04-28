@@ -1,5 +1,15 @@
 body {
   background-color: rgb(144, 172, 201);
+  position: relative;
+}
+
+#page-body-wrapper {
+  width: 85%;
+  margin: 100px auto 0 auto;
+  min-height: 500px;
+  position: relative;
+  background-color: rgb(249, 249, 249, .2);
+  padding: 20px;
 }
 
 /************** Navigation Bar ****************/
@@ -28,6 +38,8 @@ body {
 .edit,
 .delete-message {
   background-color: slategrey;
+  margin: 0 3px;
+  border-radius: 5px;
 }
 
 .edit:hover {

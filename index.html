@@ -54,59 +54,62 @@
       </div>
     </nav>
 
-    <div class="nav-margin"></div>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal">
-    Select a Theme</button>
+    <div class="page-body-background"></div>
+    <!-- <div class="nav-margin"></div> -->
+    <div id="page-body-wrapper">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal">
+      Select a Theme</button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Select a Design Theme</h4>
-          </div>
-          <div class="modal-body">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" class="theme" id="large-txt" name="theme-choice" value="large-text">Large Text
-              </label>
-              <label>
-                <input type="checkbox" class="theme" id="dark-theme" name="theme-choice" value="dark-theme">Dark Theme
-              </label><br><br>
-              <h4>Custom Theme</h4>
-              <h6>Background Color</h6>
-              <label>
-                <input type="radio" class="colors color-selection" id="tomato" name="color-choice" value="tomato">Tomato
-              </label>
-              <label>
-                <input type="radio" class="colors color-selection" id="tan" name="color-choice" value="tan">Tan
-              </label>
-              <label>
-                <input type="radio" class="colors color-selection" id="dark-violet" name="color-choice" value="dark-violet">Dark Violet
-              </label><br>
-              <h6>Font Color</h6>
-              <label>
-                <input type="radio" class="txt-colors color-selection" id="white-txt" name="txt-color-choice" value="white">White
-              </label>
-              <label>
-                <input type="radio" class="txt-colors color-selection" id="black-txt" name="txt-color-choice" value="black">Black
-              </label>
-            </div><!--Checkboxes div-->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button id="cancel-changes" type="button" class="btn btn-warning">Cancel Changes</button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Select a Design Theme</h4>
+            </div>
+            <div class="modal-body">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" class="theme" id="large-txt" name="theme-choice" value="large-text">Large Text
+                </label>
+                <label>
+                  <input type="checkbox" class="theme" id="dark-theme" name="theme-choice" value="dark-theme">Dark Theme
+                </label><br><br>
+                <h4>Custom Theme</h4>
+                <h6>Background Color</h6>
+                <label>
+                  <input type="radio" class="colors color-selection" id="tomato" name="color-choice" value="tomato">Tomato
+                </label>
+                <label>
+                  <input type="radio" class="colors color-selection" id="tan" name="color-choice" value="tan">Tan
+                </label>
+                <label>
+                  <input type="radio" class="colors color-selection" id="dark-violet" name="color-choice" value="dark-violet">Dark Violet
+                </label><br>
+                <h6>Font Color</h6>
+                <label>
+                  <input type="radio" class="txt-colors color-selection" id="white-txt" name="txt-color-choice" value="white">White
+                </label>
+                <label>
+                  <input type="radio" class="txt-colors color-selection" id="black-txt" name="txt-color-choice" value="black">Black
+                </label>
+              </div><!--Checkboxes div-->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button id="cancel-changes" type="button" class="btn btn-warning">Cancel Changes</button>
+            </div>
           </div>
         </div>
       </div>
+
+      <div id="messages-display">
+
+
+      </div>
     </div>
-
-    <div id="messages-display">
-
-    </div>
-
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="dist/app.js"></script>

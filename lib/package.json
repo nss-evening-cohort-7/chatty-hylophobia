@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "emojify": "^1.0.0",
+    "emojify.js": "^1.1.0",
     "moment": "^2.22.1"
   }
 }
