@@ -6,8 +6,8 @@ const buildDomString = (messagesArray) => {
     domString +=    `<h4 class="displayed-username">${message.username} </h4>`;
     domString +=    `<p class="displayed-time">[${message.timestamp}]: </p>`;
     domString +=    `<p class="displayed-message">${message.message}</p>`;
-    domString +=    `<button class="edit">Edit</button>`;
-    domString +=    `<button class="delete-message">Delete</button>`;
+    domString +=    `<button class="edit" id="edit">Edit</button>`;
+    domString +=    `<button class="delete-message" id="delete">Delete</button>`;
     domString +=  `</div>`;
   });
   printToDom('messages-display', domString);

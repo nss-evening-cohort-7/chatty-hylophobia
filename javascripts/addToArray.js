@@ -12,9 +12,13 @@ const addToArray = () => {
     'timestamp': timestamp,
     'id': counter,
   };
-  counter++;
-  data.addMessage(newObject);
-  dom(data.getMessages());
+  if (newObject.username === '') {
+    alert('Select A User Name!!!');
+  } else {
+    counter++;
+    data.addMessage(newObject);
+    dom(data.getMessages());
+  };
 };
 
 module.exports = addToArray;
