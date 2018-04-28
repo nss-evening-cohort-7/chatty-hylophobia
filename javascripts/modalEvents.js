@@ -16,6 +16,15 @@ const changeTheme = (e) => {
     page.classList.add('dark-theme');
   } else if (themePicked.id === 'large-txt') {
     page.classList.add('large-txt');
+  } else if (themePicked.id === 'snowflake') {
+    for (let i = 0; i < customColorSelections.length; i++) {
+      customColorSelections[i].setAttribute('disabled', 'disabled');
+    }
+    navbar.classList.remove('navbar-default', 'contrast');
+    navbar.classList.add('navbar-inverse');
+    logo.classList.add('logo-inverted');
+    page.classList.remove('tan', 'dark-violet', 'tomato', 'black-txt');
+    page.classList.add('snowflake');
   };
   return themePicked;
 };
@@ -32,6 +41,14 @@ const removeTheme = (e) => {
     navbar.classList.remove('navbar-inverse');
   } else if (themeToRemove.id === 'large-txt') {
     page.classList.remove('large-txt');
+  } else if (themeToRemove.id === 'snowflake') {
+    for (let i = 0; i < customColorSelections.length; i++) {
+      customColorSelections[i].removeAttribute('disabled');
+    }
+    page.classList.remove('snowflake');
+    logo.removeAttribute('class');
+    navbar.classList.add('navbar-default');
+    navbar.classList.remove('navbar-inverse');
   };
   return themeToRemove;
 };
