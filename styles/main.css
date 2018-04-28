@@ -9,7 +9,7 @@ body {
   min-height: 500px;
   position: relative;
   background-color: rgb(249, 249, 249, .2);
-  padding: 20px;
+  padding: 25px 20px 20px 20px;
 }
 
 #logo {
@@ -42,6 +42,14 @@ body {
 
 #messages-display {
   position: relative;
+}
+
+.complete-message {
+  background-color: rgb(249, 249, 249, .4);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0 5px 4px 5px;
+  vertical-align: middle;
 }
 
 .displayed-username,
@@ -78,7 +86,7 @@ body {
 .btn-xs {
   position: absolute;
   right: 15px;
-  top: 15px;
+  top: 5px;
   z-index: 900;
 }
 
