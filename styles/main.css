@@ -1,6 +1,7 @@
 body {
-  background-color: rgb(144, 172, 201);
+  background: linear-gradient(to bottom, rgb(144, 172, 201), rgb(88, 128, 171));
   position: relative;
+  height: 100vh;
 }
 
 #page-body-wrapper {
@@ -14,6 +15,7 @@ body {
 
 #logo {
   width: 280px;
+  margin-bottom: 5px;
 }
 
 .logo-inverted {
@@ -38,6 +40,10 @@ body {
   margin-right: 10px;
 }
 
+.navbar-fixed-top {
+  border: none;
+}
+
 /************** Messages Display **************/
 
 #messages-display {
@@ -50,6 +56,11 @@ body {
   margin-bottom: 5px;
   padding: 0 5px 4px 5px;
   vertical-align: middle;
+  border-radius: 5px;
+}
+
+.complete-message:hover {
+  background-color: rgba(242, 242, 242, 0.7);
 }
 
 .displayed-username,
@@ -91,7 +102,7 @@ body {
 }
 
 .dark-theme {
-  background-color: rgb(57, 51, 68);
+  background: linear-gradient( to bottom, rgb(71, 50, 110),  rgb(57, 51, 68));
   color: white;
 }
 
@@ -100,15 +111,15 @@ body {
 }
 
 .tomato {
-  background-color: tomato;
+  background: linear-gradient(to bottom, tomato, rgb(177, 60, 40));
 }
 
 .tan {
-  background-color: tan;
+  background: linear-gradient(to bottom, tan, rgb(186, 138, 75));
 }
 
 .dark-violet {
-  background-color: darkviolet;
+  background: linear-gradient(to bottom, darkviolet, rgb(101, 19, 136));
 }
 
 .black-txt {
