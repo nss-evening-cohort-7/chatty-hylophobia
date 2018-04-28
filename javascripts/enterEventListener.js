@@ -4,7 +4,6 @@ const edit = require('./editEventListener');
 const emojify = require('../lib/node_modules/emojify.js/dist/js/emojify');
 
 const enterListener = () => {
-  console.log('hello');
   document.querySelector('#messageInput').addEventListener('keypress', keypressEnter);
 };
 

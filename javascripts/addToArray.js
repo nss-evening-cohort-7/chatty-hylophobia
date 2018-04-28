@@ -6,7 +6,6 @@ let counter = 6;
 
 const addToArray = () => {
   const timestamp = moment().format('MMMM Do YYYY, h:mm:ss');
-  console.log(timestamp);
   const newObject = {
     'username': getUser.getUserName(),
     'message': data.saveChanges(),
