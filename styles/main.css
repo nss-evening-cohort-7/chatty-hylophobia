@@ -1,18 +1,67 @@
 body {
-  background-color: rgb(144, 172, 201);
+  background: linear-gradient(to bottom, rgb(144, 172, 201), rgb(88, 128, 171));
+  position: relative;
+  height: 100vh;
+}
+
+#page-body-wrapper {
+  width: 85%;
+  margin: 100px auto 0 auto;
+  min-height: 500px;
+  position: relative;
+  background-color: rgb(249, 249, 249, .2);
+  padding: 25px 20px 20px 20px;
+}
+
+#logo {
+  width: 280px;
+  margin-bottom: 5px;
+}
+
+.logo-inverted {
+  filter: invert(100%);
+}
+
+.icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  opacity: .2;
+  z-index: -1;
 }
 
 /************** Navigation Bar ****************/
 
 #messageInput{
-  width: 1000px;
+  width: 800px;
 }
 
-.nav-margin {
-  height: 100px;
+.navbar-right {
+  margin-right: 10px;
+}
+
+.navbar-fixed-top {
+  border: none;
 }
 
 /************** Messages Display **************/
+
+#messages-display {
+  position: relative;
+}
+
+.complete-message {
+  background-color: rgb(249, 249, 249, .4);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0 5px 4px 5px;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.complete-message:hover {
+  background-color: rgba(242, 242, 242, 0.7);
+}
 
 .displayed-username,
 .displayed-time,
@@ -28,6 +77,8 @@ body {
 .edit,
 .delete-message {
   background-color: slategrey;
+  margin: 0 3px;
+  border-radius: 5px;
 }
 
 .edit:hover {
@@ -43,8 +94,15 @@ body {
   color: black;
 }
 
+.btn-xs {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  z-index: 900;
+}
+
 .dark-theme {
-  background-color: rgb(57, 51, 68);
+  background: linear-gradient( to bottom, rgb(71, 50, 110),  rgb(57, 51, 68));
   color: white;
 }
 
@@ -53,15 +111,15 @@ body {
 }
 
 .tomato {
-  background-color: tomato;
+  background: linear-gradient(to bottom, tomato, rgb(177, 60, 40));
 }
 
 .tan {
-  background-color: tan;
+  background: linear-gradient(to bottom, tan, rgb(186, 138, 75));
 }
 
 .dark-violet {
-  background-color: darkviolet;
+  background: linear-gradient(to bottom, darkviolet, rgb(101, 19, 136));
 }
 
 .black-txt {
@@ -73,7 +131,7 @@ body {
 }
 
 .contrast {
-  background-color: grey;
+  background-color: rgb(99, 97, 97);
 }
 
 /*---------------------JMOJI-------------------------------*/
