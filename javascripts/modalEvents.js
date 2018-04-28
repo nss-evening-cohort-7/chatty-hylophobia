@@ -1,6 +1,7 @@
 const page = document.getElementById('body');
 const navbar = document.getElementById('navbar');
 const customColorSelections = document.getElementsByClassName('color-selection');
+const logo = document.getElementById('logo');
 
 const changeTheme = (e) => {
   const themePicked = e.target;
@@ -11,6 +12,7 @@ const changeTheme = (e) => {
     page.classList.add('dark-theme');
     navbar.classList.remove('navbar-default');
     navbar.classList.add('navbar-inverse');
+    logo.classList.add('logo-inverted');
     page.classList.remove('tan');
     page.classList.remove('dark-violet');
     page.classList.remove('tomato');
@@ -30,6 +32,7 @@ const removeTheme = (e) => {
     page.classList.remove('dark-theme');
     navbar.classList.add('navbar-default');
     navbar.classList.remove('navbar-inverse');
+    logo.removeAttribute('class');
   } else if (themeToRemove.id === 'large-txt') {
     page.classList.remove('large-txt');
   };
@@ -60,10 +63,12 @@ const changeTxtColor = (e) => {
     page.classList.add('black-txt');
     page.classList.remove('white-txt');
     navbar.classList.remove('contrast');
+    logo.removeAttribute('class');
   } else if (txtColorPicked.id === 'white-txt') {
     page.classList.add('white-txt');
     page.classList.remove('black-txt');
     navbar.classList.add('contrast');
+    logo.classList.add('logo-inverted');
   };
   return txtColorPicked;
 };
