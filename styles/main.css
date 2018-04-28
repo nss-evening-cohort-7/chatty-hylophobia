@@ -15,11 +15,11 @@ body {
 /************** Navigation Bar ****************/
 
 #messageInput{
-  width: 1000px;
+  width: 800px;
 }
 
-.nav-margin {
-  height: 100px;
+.navbar-right {
+  margin-right: 10px;
 }
 
 /************** Messages Display **************/
@@ -53,6 +53,12 @@ body {
 /*-------------------- Modal Styling----------------------- */
 .modal {
   color: black;
+}
+
+.btn-xs {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
 .dark-theme {
