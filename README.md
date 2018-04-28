@@ -1,20 +1,46 @@
 # Chatty Group Project
-Your group will be creating a chat application. The features your team will build have already been added to your backlog in the "projects" section of this repo. This application should demonstrate your skills in:
-- Modular code
-- Dependency chaining
-- Asynchronous code
-- DOM interaction
-- Debugging
 
-## Requirements
-* Use Bootstrap
-* Balanced GitHub contributions
-* Completed README
-* No Grunt errors
-* Use Browserify
-
-## Interacting With Your Product Owner
-Your group has been designated a product owner (one of the instructors). This product owner has the overall vision of the application and must approve your tickets before you start working on them. When you complete the MVP tickets in your backlog, you should reach out to your product owner to recieve tickets for additional features. Note that this project is often used as a portfolio project for students, so you and your team should push yourselves to get to the "game changer" bonus features, but only after you have a strong MVP.
+## Specs:
+Create a chat application that uses the following technologies:
 
 
-Check out the [simple wireframe](https://app.moqups.com/chortlehoort/uGBbLbK46Y/view/page/a3bd0c733) for this application on Moqups.com. You can make your final interface as fancy as you like, but keep the general layout similar to the wireframe.
+## Technologies
+
+* Bootstrap
+* HTML 5
+* CSS
+* Javascript
+* Browserify
+* Modals
+
+## Description 
+A user friendly chat app that incorporates the following features:
+
+* Has multiple users
+* Users can delete or edit their messages by using the delete and edit button
+* Users are able to choose different custom themes for the background color and font-size/color
+* Users can choose different emojis 
+* Users are able to see the timestamp of the messages
+
+## How to run 
+
+1. Clone down this repo, and cd into project folder
+2. Install http-server plugin via npm
+3. In your terminal hs -p 9999
+4. In your browser navigate to: localhost:9999
+
+
+Contributors: 
+
+[April Watson](https://github.com/aprilrochelle)
+
+[Barry Russell](https://github.com/BLRussell-09)
+
+[Alex Orga](https://github.com/AlexOrga)
+
+[Leo Taylor](https://github.com/leotaylor)
+
+[Mehret Kulala](https://github.com/Mehret17)
+
+
+
