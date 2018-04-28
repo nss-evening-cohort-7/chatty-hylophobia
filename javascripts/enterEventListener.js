@@ -16,8 +16,6 @@ const keypressEnter = (e) =>
     document.querySelector('#messageInput').value = '';
     emojify.setConfig({'img_dir': './lib/jemoji/emojis',});
     emojify.run(document.getElementById('messages-display'));
-    edit.initEditButton();
-    deleteEventListener.deleteEventListener();
     document.getElementById('messageInput').value = '';
   };
 };
