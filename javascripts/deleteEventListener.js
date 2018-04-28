@@ -1,6 +1,7 @@
 const data = require('./data');
 const buildDomString = require('./dom');
 const edit = require('./editEventListener');
+const emojify = require('../lib/node_modules/emojify.js/dist/js/emojify');
 
 const getId = (e) => {
   const id = e.target.parentNode.id;
@@ -15,7 +16,9 @@ const removeFromArray = (id) => {
   buildDomString(newMessages);
   deleteEventListener();
   edit.initEditButton();
+
   data.setMessages(newMessages);
+  emojify.run(document.getElementById('messages-display'));
 };
 
 const deleteEventListener = () => {
