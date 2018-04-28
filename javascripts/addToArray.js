@@ -6,17 +6,19 @@ let counter = 6;
 
 const addToArray = () => {
   const timestamp = moment().format('MMMM Do YYYY, h:mm:ss');
-  // let counter = 6;
-  console.log(timestamp);
   const newObject = {
     'username': getUser.getUserName(),
     'message': data.saveChanges(),
     'timestamp': timestamp,
     'id': counter,
   };
-  counter++;
-  data.addMessage(newObject);
-  dom(data.getMessages());
+  if (newObject.username === '') {
+    alert('Select A User Name!!!');
+  } else {
+    counter++;
+    data.addMessage(newObject);
+    dom(data.getMessages());
+  };
 };
 
 module.exports = addToArray;

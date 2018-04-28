@@ -18,7 +18,7 @@ const keypressEnter = (e) =>
     emojify.run(document.getElementById('messages-display'));
     edit.initEditButton();
     deleteEventListener.deleteEventListener();
-    document.querySelector('#messageInput').value = '';
+    document.getElementById('messageInput').value = '';
   };
 };
 
