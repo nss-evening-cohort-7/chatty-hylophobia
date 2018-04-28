@@ -1,5 +1,6 @@
 const data = require('./data');
 const buildDomString = require('./dom');
+const emojify = require('../lib/node_modules/emojify.js/dist/js/emojify');
 
 const editButtons = document.getElementsByClassName('edit');
 const inputVal = document.getElementById('messageInput');
@@ -62,6 +63,7 @@ const removeFromArray = (id) => {
   buildDomString(newMessages);
   messageEvents();
   data.setMessages(newMessages);
+  emojify.run(document.getElementById('messages-display'));
 };
 
 const deleteEventListener = () => {
