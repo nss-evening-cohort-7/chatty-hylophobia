@@ -1,6 +1,5 @@
 const addToArray = require('./addToArray');
 const messageEvents = require('./messageEvents');
-const deleteEventListener = require('./deleteEventListener');
 const edit = require('./editEventListener');
 const emojify = require('../lib/node_modules/emojify.js/dist/js/emojify');
 
