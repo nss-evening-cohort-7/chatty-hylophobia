@@ -1,21 +1,17 @@
 const loadMessages = require('./messages');
 const data = require('./data');
 const buildDomString = require('./dom');
-const deleteEventListener = require('./deleteEventListener');
 const radioButton = require('./radioButtonEvent');
 const modalEvents = require('./modalEvents');
-const edit = require('./editEventListener');
 const clearButton = require('./clearEvent');
-// const addToArray = require('./addToArray');
 const enterListener = require('./enterEventListener');
+const messageEvents = require('./messageEvents');
 
 const whenMessagesLoads = function () {
   const messagesData = JSON.parse(this.responseText).messages;
   data.setMessages(messagesData);
   buildDomString(messagesData);
-  edit.initEditButton();
-  deleteEventListener.deleteEventListener();
-  // addToArray();
+  messageEvents();
 };
 
 const errorFunction = function () {
@@ -25,12 +21,10 @@ const errorFunction = function () {
 const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
   enterListener();
-  edit.initEditButton();
   radioButton.radioButtonEvent();
   // radioButton.keyPressEvent();
   modalEvents.selectThemeEvents();
   modalEvents.removeAllThemes();
-  edit.initEditButton();
   clearButton.addClearEvent();
 };
 
