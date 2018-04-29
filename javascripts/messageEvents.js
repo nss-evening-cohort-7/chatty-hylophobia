@@ -24,39 +24,9 @@ const initEditButton = () =>
   };
 };
 
-// const removeListener = () => {
-//   document.querySelector('#messageInput').removeEventListener();
-// };
-
-const edditor = (e) =>
-{
-  if (inputVal.value = e.target.previousSibling.innerHTML) {
-    document.querySelector('#messageInput').removeEventListener('keypress', keypressEnter);
-  };
-  // keypressEnter.preventDefault();
-  // keypressEnter.preventDefault();
-  // const enterListener = () => {
-  //   enterListener.preventDefault
-  //   document.querySelector('#messageInput').addEventListener('keypress', keypressEnter);
-
-  // };
-  // document.querySelector('#messageInput').removeEventListener('keypress', keypressEnter){
-
-  // }
-  // const key = document.querySelector('#messageInput');
-  // if (key === 13)
-  // {
-  //   inputVal.preventDefault();
-  //   return false;
-  // };
-
-  // // const key = e.keyCode
-  // if (key === 13)
-  // {
-  //   key.preventDefault();
-  //   // return false;
-  // };
-  // document.querySelector('#messageInput').removeEventListener('keyPress', keypressEnter);
+const edditor = (e) => {
+  inputVal.value = e.target.previousSibling.innerHTML;
+  document.querySelector('#messageInput').removeEventListener('keypress', keypressEnter);
   saveButton();
 };
 

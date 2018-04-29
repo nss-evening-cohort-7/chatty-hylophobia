@@ -22,7 +22,6 @@ const initializer = () => {
   loadMessages(whenMessagesLoads, errorFunction);
   messageEvents.enterListener();
   radioButton.radioButtonEvent();
-  // radioButton.keyPressEvent();
   modalEvents.selectThemeEvents();
   modalEvents.removeAllThemes();
   clearButton.addClearEvent();

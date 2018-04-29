@@ -19,18 +19,7 @@ const radioButtonEvent = () => {
   };
 };
 
-// Key press
-// const keyPressEvent = (e) => {
-//   const messageInput = document.getElementById('messageInput').value;
-//   messageInput.addEventListener('keypress', (e) => {
-//     if (e.keyCode === 13) {
-//       addToArray();
-//     };
-//   });
-// };
-
 module.exports = {
   radioButtonEvent,
   getUserName,
-  // keyPressEvent,
 };
