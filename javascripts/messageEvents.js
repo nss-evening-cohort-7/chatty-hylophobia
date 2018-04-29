@@ -1,7 +1,6 @@
 const data = require('./data');
 const buildDomString = require('./dom');
 const emojify = require('../lib/node_modules/emojify.js/dist/js/emojify');
-const addToArray = require('./addToArray');
 
 const editButtons = document.getElementsByClassName('edit');
 const inputVal = document.getElementById('messageInput');
@@ -26,7 +25,7 @@ const initEditButton = () =>
 
 const edditor = (e) => {
   inputVal.value = e.target.previousSibling.innerHTML;
-  document.querySelector('#messageInput').removeEventListener('keypress', keypressEnter);
+  // removeListener();
   saveButton();
 };
 
@@ -36,7 +35,7 @@ const saveButton = () => {
   saveButton.addEventListener('click', replaceInArray);
 };
 
-const replaceInArray = (e) => {
+const replaceInArray = () => {
   const messages = data.getMessages();
   messages.forEach((message) => {
     if (message.id === id) {
@@ -78,25 +77,4 @@ const messageEvents = () => {
   initEditButton();
 };
 
-const enterListener = () => {
-  document.querySelector('#messageInput').addEventListener('keypress', keypressEnter);
-};
-
-const keypressEnter = (e) =>
-{
-  const key = e.keyCode;
-  if (key === 13)
-  {
-    addToArray();
-    messageEvents();
-    document.querySelector('#messageInput').value = '';
-    emojify.setConfig({'img_dir': './lib/jemoji/emojis',});
-    emojify.run(document.getElementById('messages-display'));
-    document.getElementById('messageInput').value = '';
-  };
-};
-
-module.exports = {
-  messageEvents,
-  enterListener,
-};
+module.exports = messageEvents;

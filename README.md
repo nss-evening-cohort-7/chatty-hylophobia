@@ -19,10 +19,25 @@ Create a chat application that uses the following technologies:
 A user friendly chat app that incorporates the following features:
 
 * Has multiple users
-* Users can delete or edit their messages by using the delete and edit button
+* Users are able to delete or edit their messages by using the delete and edit button
 * Users are able to choose different custom themes for the background color and font-size/color
 * Users can choose different emojis 
 * Users are able to see the timestamp of the messages
+
+Chatty App
+![Webpage](/screenshots/Chattyapp.png)
+
+Multiple users
+![Webpage](/screenshots/multipleUsers.png)
+
+Edit and Delete Button
+![Webpage](/screenshots/editandDeleteButton.png)
+
+Modal
+![Webpage](/screenshots/modal.png)
+
+Emoji
+![Webpage](/screenshots/emoji.png)
 
 ## How to run 
 
