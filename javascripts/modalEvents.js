@@ -9,14 +9,11 @@ const changeTheme = (e) => {
     for (let i = 0; i < customColorSelections.length; i++) {
       customColorSelections[i].setAttribute('disabled', 'disabled');
     }
-    page.classList.add('dark-theme');
-    navbar.classList.remove('navbar-default');
+    navbar.classList.remove('navbar-default', 'contrast');
     navbar.classList.add('navbar-inverse');
     logo.classList.add('logo-inverted');
-    page.classList.remove('tan');
-    page.classList.remove('dark-violet');
-    page.classList.remove('tomato');
-    page.classList.remove('black-txt');
+    page.classList.remove('tan', 'dark-violet', 'tomato', 'black-txt');
+    page.classList.add('dark-theme');
   } else if (themePicked.id === 'large-txt') {
     page.classList.add('large-txt');
   };
@@ -29,10 +26,10 @@ const removeTheme = (e) => {
     for (let i = 0; i < customColorSelections.length; i++) {
       customColorSelections[i].removeAttribute('disabled');
     }
+    logo.removeAttribute('class');
     page.classList.remove('dark-theme');
     navbar.classList.add('navbar-default');
     navbar.classList.remove('navbar-inverse');
-    logo.removeAttribute('class');
   } else if (themeToRemove.id === 'large-txt') {
     page.classList.remove('large-txt');
   };
@@ -42,17 +39,14 @@ const removeTheme = (e) => {
 const changeColor = (e) => {
   const colorPicked = e.target;
   if (colorPicked.id === 'tomato') {
+    page.classList.remove('tan', 'dark-violet');
     page.classList.add('tomato');
-    page.classList.remove('tan');
-    page.classList.remove('dark-violet');
   } else if (colorPicked.id === 'tan') {
+    page.classList.remove('dark-violet', 'tomato');
     page.classList.add('tan');
-    page.classList.remove('dark-violet');
-    page.classList.remove('tomato');
   } else if (colorPicked.id === 'dark-violet') {
+    page.classList.remove('tomato', 'tan');
     page.classList.add('dark-violet');
-    page.classList.remove('tomato');
-    page.classList.remove('tan');
   }
   return colorPicked;
 };
@@ -60,15 +54,15 @@ const changeColor = (e) => {
 const changeTxtColor = (e) => {
   const txtColorPicked = e.target;
   if (txtColorPicked.id === 'black-txt') {
-    page.classList.add('black-txt');
     page.classList.remove('white-txt');
     navbar.classList.remove('contrast');
     logo.removeAttribute('class');
+    page.classList.add('black-txt');
   } else if (txtColorPicked.id === 'white-txt') {
-    page.classList.add('white-txt');
     page.classList.remove('black-txt');
     navbar.classList.add('contrast');
     logo.classList.add('logo-inverted');
+    page.classList.add('white-txt');
   };
   return txtColorPicked;
 };
@@ -98,9 +92,9 @@ const removeAllThemes = () => {
   const cancelButton = document.getElementById('cancel-changes');
   cancelButton.addEventListener('click', function () {
     page.removeAttribute('class');
+    logo.removeAttribute('class');
+    navbar.classList.remove('navbar-inverse', 'contrast');
     navbar.classList.add('navbar-default');
-    navbar.classList.remove('navbar-inverse');
-    navbar.classList.remove('contrast');
   });
 };
 

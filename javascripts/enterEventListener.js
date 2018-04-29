@@ -6,11 +6,9 @@ const enterListener = () => {
   document.querySelector('#messageInput').addEventListener('keypress', keypressEnter);
 };
 
-const keypressEnter = (e) =>
-{
+const keypressEnter = (e) => {
   const key = e.keyCode;
-  if (key === 13)
-  {
+  if (key === 13) {
     addToArray();
     messageEvents();
     document.querySelector('#messageInput').value = '';

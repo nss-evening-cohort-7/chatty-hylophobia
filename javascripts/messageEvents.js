@@ -27,8 +27,7 @@ const initEditButton = () =>
 //   document.querySelector('#messageInput').removeEventListener();
 // };
 
-const edditor = (e) =>
-{
+const edditor = (e) => {
   inputVal.value = e.target.previousSibling.innerHTML;
   // removeListener();
   saveButton();
