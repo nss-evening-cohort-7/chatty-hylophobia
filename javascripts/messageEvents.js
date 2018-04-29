@@ -1,6 +1,7 @@
 const data = require('./data');
 const buildDomString = require('./dom');
 const emojify = require('../lib/node_modules/emojify.js/dist/js/emojify');
+const addToArray = require('./addToArray');
 
 const editButtons = document.getElementsByClassName('edit');
 const inputVal = document.getElementById('messageInput');
@@ -29,8 +30,33 @@ const initEditButton = () =>
 
 const edditor = (e) =>
 {
-  inputVal.value = e.target.previousSibling.innerHTML;
-  // removeListener();
+  if (inputVal.value = e.target.previousSibling.innerHTML) {
+    document.querySelector('#messageInput').removeEventListener('keypress', keypressEnter);
+  };
+  // keypressEnter.preventDefault();
+  // keypressEnter.preventDefault();
+  // const enterListener = () => {
+  //   enterListener.preventDefault
+  //   document.querySelector('#messageInput').addEventListener('keypress', keypressEnter);
+
+  // };
+  // document.querySelector('#messageInput').removeEventListener('keypress', keypressEnter){
+
+  // }
+  // const key = document.querySelector('#messageInput');
+  // if (key === 13)
+  // {
+  //   inputVal.preventDefault();
+  //   return false;
+  // };
+
+  // // const key = e.keyCode
+  // if (key === 13)
+  // {
+  //   key.preventDefault();
+  //   // return false;
+  // };
+  // document.querySelector('#messageInput').removeEventListener('keyPress', keypressEnter);
   saveButton();
 };
 
@@ -40,7 +66,7 @@ const saveButton = () => {
   saveButton.addEventListener('click', replaceInArray);
 };
 
-const replaceInArray = () => {
+const replaceInArray = (e) => {
   const messages = data.getMessages();
   messages.forEach((message) => {
     if (message.id === id) {
@@ -82,4 +108,25 @@ const messageEvents = () => {
   initEditButton();
 };
 
-module.exports = messageEvents;
+const enterListener = () => {
+  document.querySelector('#messageInput').addEventListener('keypress', keypressEnter);
+};
+
+const keypressEnter = (e) =>
+{
+  const key = e.keyCode;
+  if (key === 13)
+  {
+    addToArray();
+    messageEvents();
+    document.querySelector('#messageInput').value = '';
+    emojify.setConfig({'img_dir': './lib/jemoji/emojis',});
+    emojify.run(document.getElementById('messages-display'));
+    document.getElementById('messageInput').value = '';
+  };
+};
+
+module.exports = {
+  messageEvents,
+  enterListener,
+};
