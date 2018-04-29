@@ -12,6 +12,8 @@ Create a chat application that uses the following technologies:
 * Javascript
 * Browserify
 * Modals
+* jquery
+
 
 ## Description 
 A user friendly chat app that incorporates the following features:
