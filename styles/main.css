@@ -112,6 +112,17 @@ body {
   background-size: cover;
   color: white;
 }
+.bloom {
+  background: url('https://www.pixelstalk.net/wp-content/uploads/2016/03/Summer-Nice-Flowers-Wallpaper-HD.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.music {
+  background-image: url('https://downloops.com/wp-content/uploads/edd/2016/11/MusicalNotesGold-Music_Themed_Motion_Background_Video_Loop_SampleStill.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .large-txt {
   font-size: 2.75em;

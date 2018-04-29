@@ -3,54 +3,45 @@ const navbar = document.getElementById('navbar');
 const customColorSelections = document.getElementsByClassName('color-selection');
 const logo = document.getElementById('logo');
 
-const changeTheme = (e) => {
-  const themePicked = e.target;
-  if (themePicked.id === 'dark-theme') {
+const makeFancy = (e) => {
+  const fancyThemePicked = e.target;
+  if (fancyThemePicked.id === 'dark-theme') {
     for (let i = 0; i < customColorSelections.length; i++) {
       customColorSelections[i].setAttribute('disabled', 'disabled');
     }
     navbar.classList.remove('navbar-default', 'contrast');
     navbar.classList.add('navbar-inverse');
     logo.classList.add('logo-inverted');
-    page.classList.remove('tan', 'dark-violet', 'tomato', 'black-txt');
+    page.classList.remove('tan', 'dark-violet', 'tomato', 'black-txt', 'snowflake', 'bloom', 'music');
     page.classList.add('dark-theme');
-  } else if (themePicked.id === 'large-txt') {
-    page.classList.add('large-txt');
-  } else if (themePicked.id === 'snowflake') {
+  } else if (fancyThemePicked.id === 'snowflake') {
     for (let i = 0; i < customColorSelections.length; i++) {
       customColorSelections[i].setAttribute('disabled', 'disabled');
     }
     navbar.classList.remove('navbar-default', 'contrast');
     navbar.classList.add('navbar-inverse');
     logo.classList.add('logo-inverted');
-    page.classList.remove('tan', 'dark-violet', 'tomato', 'black-txt');
+    page.classList.remove('tan', 'dark-violet', 'tomato', 'black-txt', 'dark-theme', 'bloom', 'music');
     page.classList.add('snowflake');
-  };
-  return themePicked;
-};
-
-const removeTheme = (e) => {
-  const themeToRemove = e.target;
-  if (themeToRemove.id === 'dark-theme') {
+  } else if (fancyThemePicked.id === 'bloom') {
     for (let i = 0; i < customColorSelections.length; i++) {
-      customColorSelections[i].removeAttribute('disabled');
+      customColorSelections[i].setAttribute('disabled', 'disabled');
     }
+    navbar.classList.remove('contrast', 'navbar-inverse');
     logo.removeAttribute('class');
-    page.classList.remove('dark-theme');
+    page.classList.remove('tan', 'dark-violet', 'tomato', 'white-txt', 'dark-theme', 'snowflake', 'music');
+    page.classList.add('bloom');
     navbar.classList.add('navbar-default');
-    navbar.classList.remove('navbar-inverse');
-  } else if (themeToRemove.id === 'large-txt') {
-    page.classList.remove('large-txt');
-  } else if (themeToRemove.id === 'snowflake') {
+  } else if (fancyThemePicked.id === 'music') {
     for (let i = 0; i < customColorSelections.length; i++) {
-      customColorSelections[i].removeAttribute('disabled');
+      customColorSelections[i].setAttribute('disabled', 'disabled');
     }
-    page.classList.remove('snowflake');
+    navbar.classList.remove('contrast', 'navbar-inverse');
     logo.removeAttribute('class');
+    page.classList.remove('tan', 'dark-violet', 'tomato', 'white-txt', 'dark-theme', 'snowflake', 'bloom');
+    page.classList.add('music');
     navbar.classList.add('navbar-default');
-    navbar.classList.remove('navbar-inverse');
   };
-  return themeToRemove;
 };
 
 const changeColor = (e) => {
@@ -85,20 +76,25 @@ const changeTxtColor = (e) => {
 };
 
 const selectThemeEvents = () => {
-  const themeChoices = document.getElementsByClassName('theme');
-  for (let i = 0; i < themeChoices.length; i++) {
-    themeChoices[i].addEventListener('change', function () {
-      if (this.checked) {
-        changeTheme(event);
-      } else {
-        removeTheme(event);
-      }
-    });
+  const largeTextTheme = document.getElementById('large-txt');
+  largeTextTheme.addEventListener('change', function () {
+    if (this.checked) {
+      page.classList.add('large-txt');
+    } else {
+      page.classList.remove('large-txt');
+    };
+  });
+
+  const fancyThemes = document.getElementsByClassName('fancy-theme');
+  for (let m = 0; m < fancyThemes.length; m++) {
+    fancyThemes[m].addEventListener('click', makeFancy);
   };
+
   const colorChoices = document.getElementsByClassName('colors');
   for (let j = 0; j < colorChoices.length; j++) {
     colorChoices[j].addEventListener('click', changeColor);
   };
+
   const txtColorChoices = document.getElementsByClassName('txt-colors');
   for (let k = 0; k < txtColorChoices.length; k++) {
     txtColorChoices[k].addEventListener('click', changeTxtColor);
@@ -108,6 +104,13 @@ const selectThemeEvents = () => {
 const removeAllThemes = () => {
   const cancelButton = document.getElementById('cancel-changes');
   cancelButton.addEventListener('click', function () {
+    const inputs = document.getElementsByClassName('input');
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].checked = false;
+    };
+    for (let j = 0; j < customColorSelections.length; j++) {
+      customColorSelections[j].removeAttribute('disabled');
+    };
     page.removeAttribute('class');
     logo.removeAttribute('class');
     navbar.classList.remove('navbar-inverse', 'contrast');
