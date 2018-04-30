@@ -21,19 +21,19 @@ A user friendly chat app that incorporates the following features:
 
 
 Chatty App
-![Webpage](/screenshots/Chattyapp.png)
+![Webpage](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-hylophobia/master/screenshots/Chattyapp.PNG)
 
 Multiple users
-![Webpage](/screenshots/multipleUsers.png)
+![Webpage](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-hylophobia/master/screenshots/multipleUsers.PNG)
 
 Edit and Delete Button
-![Webpage](/screenshots/editandDeleteButton.png)
+![Webpage](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-hylophobia/master/screenshots/editandDeleteButton.PNG)
 
 Modal
-![Webpage](/screenshots/modal.png)
+![Webpage](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-hylophobia/master/screenshots/modal.PNG)
 
 Emoji
-![Webpage](/screenshots/emoji.png)
+![Webpage](https://raw.githubusercontent.com/nss-evening-cohort-7/chatty-hylophobia/master/screenshots/emoji.PNG)
 
 ## How to run 
 
