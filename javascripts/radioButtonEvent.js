@@ -1,4 +1,3 @@
-
 let userName = '';
 
 const button = (e) => {
@@ -8,6 +7,7 @@ const button = (e) => {
 
 const getUserName = () => {
   return userName;
+  // console.log (userName);
 };
 
 const radioButtonEvent = () => {
