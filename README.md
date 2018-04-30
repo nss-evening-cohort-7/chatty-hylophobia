@@ -1,20 +1,5 @@
 # Chatty Group Project
 
-## Specs:
-Create a chat application that uses the following technologies:
-
-
-## Technologies
-
-* Bootstrap
-* HTML 5
-* CSS
-* Javascript
-* Browserify
-* Modals
-* jquery
-
-
 ## Description 
 A user friendly chat app that incorporates the following features:
 
@@ -23,6 +8,17 @@ A user friendly chat app that incorporates the following features:
 * Users are able to choose different custom themes for the background color and font-size/color
 * Users can choose different emojis 
 * Users are able to see the timestamp of the messages
+
+
+## Technologies
+* Bootstrap
+* HTML 5
+* CSS
+* Javascript
+* Browserify
+* Modals
+* jquery
+
 
 Chatty App
 ![Webpage](/screenshots/Chattyapp.png)
@@ -45,6 +41,8 @@ Emoji
 2. Install http-server plugin via npm
 3. In your terminal hs -p 9999
 4. In your browser navigate to: localhost:9999
+5. Install moment.js via npm
+6. Install emojify.js via npm
 
 
 Contributors: 

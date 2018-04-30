@@ -23,10 +23,6 @@ const initEditButton = () =>
   };
 };
 
-// const removeListener = () => {
-//   document.querySelector('#messageInput').removeEventListener();
-// };
-
 const edditor = (e) => {
   inputVal.value = e.target.previousSibling.innerHTML;
   // removeListener();

@@ -1,5 +1,3 @@
-// const addToArray = require('./addToArray');
-
 let userName = '';
 
 const button = (e) => {
